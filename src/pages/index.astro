@@ -1,28 +1,70 @@
 ---
 import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import GithubIcon from '../icons/Github.astro';
+import LinkeInIcon from "../icons/LinkedIn.astro"
+import MailIcon from '../icons/Mail.astro';
 import Layout from '../layouts/Layout.astro';
+import Experience from '../components/Experience.astro';
+import WorkIcon from '../icons/Work.astro';
 ---
 
-<Layout title="Portfolio Martin Castro">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44 " >
+<Layout title="Portfolio Martin Castro - Desarrollador y Promgramador Web Full Stack">
+	<main class="px-3" >
+		<SectionContainer class="pt-44 md:py-44">
+			<img
+				class="rounded-full size-40 mb-5"
+				src="https://avatars.githubusercontent.com/u/94722526?v=4" 
+				alt="My-photo"
+			/>
 			<h1 
-				class="text-5xl font-bold flex flex-row gap-x-5 pb-5"
+				class="text-2xl md:text-5xl font-bold flex flex-row gap-x-4 pb-5"
 			>Hola Soy Martin Castro
 			<a
 			href="https://www.linkedin.com/in/martin-daniel-castro"
 			target="_blank" 
 			class="flex justify-center items-center" >
-				<Badge>Open Work</Badge>
+				<Badge>Open To Work</Badge>
 			</a>
 			</h1>
-				<h2 class="text-xl opacity-80" >
-					Desarrolo Web Full Stack, +5 años de experiencia. Siempre en busca de soluciones!!  
+				<h2 class="text-base md:text-2xl opacity-80" >
+					<span class="text-yellow-200" >
+						Desarrollador Web Full Stack
+					</span> con mas de 5 años de experiencia. 
+					Siempre en busca de soluciones!!  
 				</h2>
-			<ul>
-
-			</ul>
-		</section>
+			<nav class="md:flex gap-x-5 mt-5">
+				<SocialPill href="https://github.com/Drake4044">
+					<GithubIcon class="size-8"/>
+					Github
+				</SocialPill>
+				<SocialPill href="https://www.linkedin.com/in/martin-daniel-castro">
+					<LinkeInIcon class="size-7"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="mailto:martincastro4044@gmail.com">
+					<MailIcon class="size-8"/>
+					Martincastro4044@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia" class="pt-28" >
+			<h2 class="text-2xl font-bold mb-8 flex items-center gap-x-3 " >
+				<WorkIcon class="size-8" />
+				Expeciencia laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
 	</main>
 </Layout>
+
+<style>
+	img {
+		mask-image: linear-gradient(
+			black 30%,
+			transparent
+		);
+	}
+</style>
 
