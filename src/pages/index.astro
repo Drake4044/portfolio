@@ -8,6 +8,8 @@ import MailIcon from '../icons/Mail.astro';
 import Layout from '../layouts/Layout.astro';
 import Experience from '../components/Experience.astro';
 import WorkIcon from '../icons/Work.astro';
+import CodeIcon from '../icons/Code.astro'
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="Portfolio Martin Castro - Desarrollador y Promgramador Web Full Stack">
@@ -28,7 +30,7 @@ import WorkIcon from '../icons/Work.astro';
 				<Badge>Open To Work</Badge>
 			</a>
 			</h1>
-				<h2 class="text-base md:text-2xl opacity-80" >
+				<h2 class="text-base md:text-xl lg:text-2xl opacity-80 text-wrap" >
 					<span class="text-yellow-200" >
 						Desarrollador Web Full Stack
 					</span> con mas de 5 años de experiencia. 
@@ -52,6 +54,13 @@ import WorkIcon from '../icons/Work.astro';
 		<SectionContainer id="experiencia" class="pt-28" >
 			<h2 class="text-2xl font-bold mb-8 flex items-center gap-x-3 " >
 				<WorkIcon class="size-8" />
+				Expeciencia laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+		<SectionContainer id="proyectos" class="pt-28" >
+			<h2 class="text-2xl font-bold mb-8 flex items-center gap-x-3 " >
+				<CodeIcon class="size-8" />
 				Expeciencia laboral
 			</h2>
 			<Experience/>
