@@ -1,0 +1,87 @@
+---
+import HTMLIcon from "../icons/HTML.astro"
+import TailWindIcon from "../icons/Tailwind.astro"
+import JavaScriptIcon from "../icons/Javascript.astro"
+import ReactIcon from "../icons/React.astro"
+import ReduxIcon from "../icons/Redux.astro"
+import ExpressIcon from "../icons/Express.astro"
+import CSSIcon from "../icons/CSS.astro"
+import SequelizeIcon from "../icons/Sequelize.astro"
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-orange-400",
+        icon: HTMLIcon
+    },
+    TAILWIND: {
+        name: "TailWind CSS",
+        class: "bg-sky-400",
+        icon: TailWindIcon
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-yellow-500",
+        icon: JavaScriptIcon
+    },
+    REACT: {
+        name: "React",
+        class: "bg-cyan-600",
+        icon: ReactIcon
+    },
+    REDUX: {
+        name: "Redux",
+        class: "bg-purple-400",
+        icon: ReduxIcon
+    },
+    EXPRESS: {
+        name: "Express.js",
+        class: "bg-slate-600",
+        icon: ExpressIcon
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-600",
+        icon: CSSIcon
+    },
+    SEQUELIZE: {
+        name: "Sequelize",
+        class: "bg-sky-600",
+        icon: SequelizeIcon
+    },
+}
+
+const PROJECTS = [
+    {
+        title: "Project title",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, facere impedit nobis ea accusamus aperiam error sed ipsa architecto velit. Est, ipsa. Rerum incidunt nam in quidem dolorum reprehenderit nesciunt",
+        link: "#",
+        github: "#",
+        image: "https://via.placeholder.com/300x200",
+        tags: [ TAGS.HTML, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.CSS, TAGS.SEQUELIZE ]
+    }
+]
+---
+
+
+{
+    PROJECTS.map( ({title, description, link, github, image, tags}) => (
+        <article class="mb-40">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{title}</h3>
+            <p class="text-lg mb-4 text-pretty" >{description}</p>
+            <ul class="flex gap-x-3 my-5 items-center" >
+                {
+                    tags.map( tag => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-base py-2 px-2 items-center hover:scale-110 transition-transform ${tag.class}`}>
+                                <tag.icon class="size-8"/>
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <img src={image} alt={`captura del projecto ${image}`}>
+        </article>
+    ))
+}
