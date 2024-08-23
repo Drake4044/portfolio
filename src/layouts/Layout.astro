@@ -20,13 +20,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-		<div class="container">
-			<Header/>
-			<slot />
-			<Footer/>
-		</div>
+	<body class="relative">
+		<div class="absolute top-0 bottom-0 -z-10 min-h-screen w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_30%,#000_40%,#63e_100%)]"></div>
+		<Header/>
+		<slot />
+		<Footer/>
 	</body>
 </html>
 <style is:global>
@@ -54,7 +52,7 @@ const { title } = Astro.props;
 		}
 	}
 
-	/* .container {  footter bottom
+	/* .container { 
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		min-height: 100dvh;
