@@ -29,15 +29,15 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 max-w-screen-xl"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-white-600/90 justify-center items-center gap-x-10"
+    class="flex px-3 text-sm font-medium rounded-full text-white-600/90 justify-center items-center sm:gap-x-10"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-green-400"
+          class="relative block px-2 py-2 transition hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -58,9 +58,9 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-green-400")
+              item.classList.add("text-yellow-400")
             } else {
-              item.classList.remove("text-green-400")
+              item.classList.remove("text-yellow-400")
             }
           })
         }
