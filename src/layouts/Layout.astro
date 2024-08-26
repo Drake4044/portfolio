@@ -21,7 +21,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<div class="absolute top-0 bottom-0 -z-10 min-h-screen w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_30%,#000_40%,#63e_100%)]"></div>
+		<div class= "absolute top-0 bottom-0 -z-10 min-h-screen w-full [background:radial-gradient(125%_125%_at_50%_30%,#000_40%,#63e_100%)]"></div>
 		<Header/>
 		<slot />
 		<Footer/>
@@ -39,11 +39,11 @@ const { title } = Astro.props;
 	}
 	
 	body {
-		background-color: rgb(11, 11, 11);
-		display: flex; 
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		min-height: 100vh;
+
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -51,6 +51,26 @@ const { title } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+/* 	
+ 	#header-nav {
+        animation: blur linear both 0.5s;
+        animation-timeline: scroll();
+        animation-range: 0 500px;
+      }
+
+	@keyframes blur {
+    	to {
+      	backdrop-filter: blur(20px);
+      	border-width: 1px;
+      	border-color: rgba(0, 0, 0);
+      	padding: 0.25rem 0.75rem;
+      	display: flex;
+      	flex-direction: row;
+      	align-items: center;
+      	background-color: rgb(229, 229, 229);
+      	border-radius: 9999px;
+    	}
+    } */
 
 	/* .container { 
 		display: grid;
