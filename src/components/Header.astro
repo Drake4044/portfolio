@@ -37,7 +37,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-400"
+          class="relative block px-2 py-2 transition hover:text-yellow-400 hover:text-shadow"
           aria-label={link.label}
           href={link.url}
         >
@@ -59,8 +59,10 @@ const navItems = [
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
               item.classList.add("text-yellow-400")
+              item.classList.add("text-shadow")
             } else {
               item.classList.remove("text-yellow-400")
+              item.classList.remove("text-shadow")
             }
           })
         }
@@ -91,6 +93,9 @@ const navItems = [
 </script>
 
 <style>
+  .text-shadow {
+    text-shadow: 1px 1px 5px rgb(255, 225, 0);
+  }
   nav {
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
