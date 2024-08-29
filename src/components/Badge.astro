@@ -1,5 +1,10 @@
-<span
-    class= "bg-green-500 text-slate-100 text-xs opacity-95 font-medium px-2 py-1.5 border-none rounded  hover:text-green-400 hover:bg-inherit hover:shadow-md hover:shadow-green-300 transition"
-    >
-    <slot/>
-</span>
+<div class="flex items-center">
+    <span class="relative inline-flex hover:scale-105 transition-all overflow-hidden rounded-full p-[4px] ">
+      <span
+        class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_60deg,transparent_70%,yellow_90%)] blur-lg "
+      ></span>
+      <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-yellow-400 bg-white/15 rounded-full cursor-pointer backdrop-blur-3xl whitespace-nowrap">
+        <slot />
+      </div>
+    </span>
+    </div>
