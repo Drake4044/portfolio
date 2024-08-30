@@ -11,7 +11,6 @@ import Redux from "../icons/Redux.astro"
 import Sequelize from "../icons/Sequelize.astro"
 import Express from "../icons/Express.astro"
 
-
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
@@ -58,7 +57,7 @@ const PROJECTS = [
   {
     title: "Pokedex - Pokemon",
     description:
-      "Sitio web moderno y eficiente para los fanáticos de Pokémon. Su principal función es proporcionar información detallada sobre Pokémon, utilizando la API oficial de Pokémon. La aplicación está diseñada para ofrecer una experiencia de usuario fluida y completa en información.",
+      "Sitio web moderno y eficiente para los fanáticos de Pokémon. Su principal función es proporcionar información detallada sobre Pokémon, utilizando su API oficial. La aplicación está diseñada para ofrecer una experiencia de usuario fluida y completa en información. Además de la posibilidad de crear a tu propio Pokémon personalisable!!",
     link: "",
     github: "https://github.com/Drake4044/PI-Henry-Pokemons",
     image: "/projects/pokemon/pokemon-1.webp",
@@ -70,7 +69,7 @@ const PROJECTS = [
       "Aplicación web interactiva desarrollada en JavaScript que permite a los usuarios disfrutar del icónico juego de Tetris directamente desde su navegador. Diseñada con una interfaz intuitiva y controles sencillos, esta app ofrece una experiencia de juego fiel al clásico Tetris.",
     link: "",
     github: "https://github.com/Drake4044/Tetris-Game",
-    image: "https://via.placeholder.com/300x200",
+    image: "/projects/tetris/tetris-1.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ]
@@ -81,8 +80,9 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="photo project" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      {/* <Carousel/> */}
+      <img alt="photo project" class="object-cover object-top w-full opacity-70 hover:opacity-100 transition duration-500 sm:h-full md:scale-110 md:hover:scale-100" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -110,7 +110,6 @@ const PROJECTS = [
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
-              
             </LinkButton>
           )}
           {link && (
