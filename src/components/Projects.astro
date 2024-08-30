@@ -3,6 +3,14 @@ import GitHub from "../icons/Github.astro"
 import Tailwind from "../icons/Tailwind.astro"
 import Link from "../icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Javascript from "../icons/Javascript.astro"
+import HTML from "../icons/HTML.astro"
+import CSS from "../icons/CSS.astro"
+import React from "../icons/React.astro"
+import Redux from "../icons/Redux.astro"
+import Sequelize from "../icons/Sequelize.astro"
+import Express from "../icons/Express.astro"
+
 
 const TAGS = {
   TAILWIND: {
@@ -10,24 +18,60 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-black font-bold",
+    icon: Javascript,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-400 text-black font-bold",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-500 text-black font-bold",
+    icon: CSS,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-sky-600 text-black font-bold",
+    icon: React,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-indigo-400 text-black font-bold",
+    icon: Redux,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-sky-800 text-black font-bold",
+    icon: Sequelize,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-slate-500 text-black font-bold",
+    icon: Express,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Pokedex - Pokemon",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "https://via.placeholder.com/300x200",
-    tags: [TAGS.TAILWIND],
+      "Sitio web moderno y eficiente para los fanáticos de Pokémon. Su principal función es proporcionar información detallada sobre Pokémon, utilizando la API oficial de Pokémon. La aplicación está diseñada para ofrecer una experiencia de usuario fluida y completa en información.",
+    link: "",
+    github: "https://github.com/Drake4044/PI-Henry-Pokemons",
+    image: "/projects/pokemon/pokemon-1.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.SEQUELIZE],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "JavaScrtipt - Tetris",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
+      "Aplicación web interactiva desarrollada en JavaScript que permite a los usuarios disfrutar del icónico juego de Tetris directamente desde su navegador. Diseñada con una interfaz intuitiva y controles sencillos, esta app ofrece una experiencia de juego fiel al clásico Tetris.",
+    link: "",
+    github: "https://github.com/Drake4044/Tetris-Game",
     image: "https://via.placeholder.com/300x200",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ]
 ---
@@ -46,21 +90,21 @@ const PROJECTS = [
     <h3 class="text-2xl font-bold text-gray-200">
       {title}
     </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+    <div class="flex flex-wrap mt-3 m-auto grid-rows-2]">
+      <ul class="grid grid-cols-3 xs:grid-cols-4 gap-2">
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex justify-center items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
-                <tag.icon class="size-4" />
+                <tag.icon class="size-5" />
                 {tag.name}
               </span>
             </li>
           ))}
         </ul>
 
-      <div class="mt-2 text-gray-300">{description}</div>
+      <div class="mt-4 text-gray-300">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
             <LinkButton href={github}>
