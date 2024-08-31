@@ -95,7 +95,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex justify-center items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex justify-center items-center animate-div gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
                 <tag.icon class="size-5" />
                 {tag.name}
@@ -125,4 +125,13 @@ const PROJECTS = [
     ))
   }
 </div>
+
+<style>
+  .animate-div {
+    animation: slide-up ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% contain 40%;
+    animation-fill-mode: both;
+  }
+</style>
 

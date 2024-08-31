@@ -5,7 +5,7 @@
 <article class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row mb-20">
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 [&>p>strong]:font-normal
-    [&>p>strong]:text-lg [&>p>strong]:font-mono text-pretty order-2 md:order-1 mr-5"
+    [&>p>strong]:text-lg [&>p>strong]:font-mono text-pretty order-2 md:order-1 mr-5 animate-div"
   >
     <p>
         Mi nombre es Martín Castro. Comencé en la programación luego de enamorarme de la materia  "Pensamiento Científico" en la UBA. 
@@ -40,6 +40,13 @@
 <style>
     .text-shadow {
         text-shadow: 1px 1px 3px rgb(255, 225, 0);
+    }
+    
+    .animate-div {
+      animation: slide-up ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% contain 40%;
+      animation-fill-mode: both;
     }
 </style>
 

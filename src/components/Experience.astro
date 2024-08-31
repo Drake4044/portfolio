@@ -23,10 +23,19 @@ const EXPERIENCE = [
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4 ">  
     {
         EXPERIENCE.map( experiencie => (
-        <li class="mb-10 ms-4">
+        <li class="mb-10 ms-4 animate-div">
             <ExperienceItem {...experiencie} />
         </li>       
         ))
     }                
 </ol>
+
+<style>
+    .animate-div {
+      animation: slide-up ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% contain 40%;
+      animation-fill-mode: both;
+    }
+</style>
 
