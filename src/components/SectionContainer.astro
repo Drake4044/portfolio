@@ -3,3 +3,30 @@
     class={`w-full mx-auto lg:w-[900px] ${Astro.props.class}`}>
     <slot/>
 </section>
+
+<style>
+  @keyframes slide-up {
+    0% {
+      transform: translateY(-30%) scale(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) scale(100%);
+      opacity: 1;
+    }
+    
+  }
+    .animate-div {
+      animation: slide-up ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0% contain 40%;
+      animation-fill-mode: both;
+    }
+
+  </style>
+
+
+
+
+
+

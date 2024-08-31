@@ -7,6 +7,15 @@ export default {
 			screens : {
 				"xxs": "410px",
 				"xs": "480px",
+			},
+			animation: {
+				'slide-up': 'slideUp 1s ease-out',
+			},
+			keyframes: {
+				slideUp: {
+				  '0%': { transform: 'translateY(10%)', opacity: '0' },
+				  '100%': { transform: 'translateY(0)', opacity: '1' },
+				},
 			}
 		},
 	},

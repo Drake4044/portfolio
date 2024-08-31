@@ -16,7 +16,7 @@ import AboutMe from '../components/AboutMe.astro';
 
 <Layout title="Portfolio Martin Castro - Desarrollador y Programador Web Full Stack">
 	<main class="px-4">
-		<SectionContainer id="top" class="pt-28 sm:py-36 max-w-5xl mx-auto">
+		<SectionContainer id="top" class="pt-28 sm:py-36 max-w-5xl mx-auto animate-slide-up">
 			<div class="flex gap-3 mb-4 pr-5">
 				<img
 					class="rounded-full size-32 sm:size-40"
@@ -54,7 +54,7 @@ import AboutMe from '../components/AboutMe.astro';
 				</SocialPill>
 			</nav>
 		</SectionContainer>
-		<SectionContainer id="experiencia" class="pt-28 mt-10" >
+		<SectionContainer id="experiencia" class="pt-28 mt-10 animate-div" >
 			<h2 class="text-3xl font-bold mb-8 flex items-center gap-x-3 " >
 				<WorkIcon class="size-8" />
 				Expeciencia
@@ -68,7 +68,7 @@ import AboutMe from '../components/AboutMe.astro';
 			</h2>
 			<Projects/>
 		</SectionContainer>
-		<SectionContainer id="sobre-mi" class="pt-28 mt-10" >
+		<SectionContainer id="sobre-mi" class="pt-28 mt-10 animate-div" >
 			<h2 class="text-3xl font-bold mb-8 flex items-center gap-x-3 " >
 				<ProfileCheck class="size-8" />
 				Sobre mi
@@ -85,5 +85,12 @@ import AboutMe from '../components/AboutMe.astro';
 			transparent
 		);
 	}
+
+	.animate-div {
+        animation: slide-up ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0% contain 70%;
+        animation-fill-mode: both;
+    }
 </style>
 
