@@ -19,8 +19,8 @@ import AboutMe from '../components/AboutMe.astro';
 		<SectionContainer id="top" class="pt-28 sm:py-36 max-w-5xl mx-auto animate-slide-up">
 			<div class="flex gap-3 mb-4 pr-5">
 				<img
-					class="rounded-full size-32 sm:size-40"
-					src="https://avatars.githubusercontent.com/u/94722526?v=4" 
+					class="object-fill rounded-3xl size-40 p-1 md:size-52 md:p-3 ring-1 ring-black/70 [background:radial-gradient(125%_125%_at_50%_30%,#000_40%,#63e_100%)]"
+					src="./public/pictures/Photo-me-01.webp" 
 					alt="My-photo"
 				/>
 				<a
@@ -80,8 +80,8 @@ import AboutMe from '../components/AboutMe.astro';
 
 <style>
 	img {
-		mask-image: linear-gradient(
-			black 30%,
+		mask-image: radial-gradient(
+			black 20%,
 			transparent
 		);
 	}

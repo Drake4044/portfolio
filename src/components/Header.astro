@@ -23,13 +23,13 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "mailto:martincastro4044@gmail.com",
   },
 ]
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-20 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-white-600/90 justify-center items-center sm:gap-x-10"
@@ -97,11 +97,10 @@ const navItems = [
     text-shadow: 1px 1px 5px rgb(255, 225, 0);
   }
   nav {
-    animation: nav-shadown 1s linear both;
+    animation: nav-shadown linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
   }
-
   @keyframes nav-shadown {
     to {
       @apply shadow-lg ring-1 backdrop-blur [background:radial-gradient(125%_125%_at_50%_30%,#000_40%,#63e_100%)] ring-white/10;
